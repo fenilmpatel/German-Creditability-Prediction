@@ -1,0 +1,24 @@
+
+{% extends "layout01.html" %}
+{% block temp %}
+
+
+<div class="content-section">
+{% if prediction_text=='Prediction For Applied Person is Genuine Person.' %} 
+    <div class="alert alert-success" role="alert">
+        Prediction For Applied Person is Genuine Person.
+    </div>
+{% else %}
+
+    <div class="alert alert-danger">
+        Prediction For Applied Person is Fraud Person.
+    </div>
+
+{% endif %}  
+</div>
+
+
+
+
+   
+{% endblock temp %}

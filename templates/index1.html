@@ -1,0 +1,37 @@
+{% extends "layout01.html" %}
+{% block temp %}
+
+
+
+    <div class="content-section">
+ 
+
+        <div class="form-group">
+          <form method="POST" action="{{ url_for('predict')}}">
+              <input type="text" name="saccount" class="form-control" placeholder="Status of Checking account[Debit-Memo][1-4] e.g 4--No checking act" required="required" /><br><br>
+              <input type="text" name="mduration" class="form-control" placeholder="Repay of Credits Tenure In Months e.g 36" required="required" /><br><br>
+              <input type="text" name="chistory" class="form-control" placeholder="Credit History[0-4] e.g 4--Critical Account/Bad Account" required="required" /><br><br>
+              
+              <input type="text" name="camt" class="form-control" placeholder="Credit Amount[0-20000$] e.g.5000" required="required" /><br><br>
+              <input type="text" name="valueofsavingact" class="form-control" placeholder="Value of Saving Account based on Debit-Memo[1-5] e.g 5--No Saving-Account" required="required" /><br><br>
+              <input type="text" name="semployee" class="form-control" placeholder="Employee Years of Experience[1-5] e.g.1--Unemployed" required="required" /><br><br>
+              
+              <input type="text" name="age" class="form-control" placeholder="Age e.g. 29" required="required" /><br><br>
+              <input type="text" name="sex&maritals" class="form-control" placeholder="Sex and Marital Status[1-4] e.g. 3--Male-Single" required="required" /><br><br>
+              
+              <input type="text" name="property" class="form-control" placeholder="What Property You have[1-4] e.g.4--No & 1--real-estate property" required="required" /><br><br>
+            
+        
+        
+              <button type="submit" class="btn btn-primary btn-block btn-block">Predict</button>
+        
+            
+            
+            </form>
+        </div>
+    </div>
+
+    <br>
+   <br>
+   
+{% endblock temp %}
